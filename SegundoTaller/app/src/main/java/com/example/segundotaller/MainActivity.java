@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         String message =editText.getText().toString();
 
 
-        String url = "https://bedraggled-freezes.000webhostapp.com/TercerCorte/registrar.php"+message;
+        String url = "https://urepublicana.edu.co/pages/index.php"+message;
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
