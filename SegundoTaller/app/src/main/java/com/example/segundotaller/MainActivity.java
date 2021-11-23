@@ -25,23 +25,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void  registrar (View view){
-        final TextView textView = (TextView) findViewById(R.id.text);
+        final TextView textView = (TextView) findViewById(R.id.registrar);
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        EditText editText = (EditText) findViewById(R.id.txtnombre);
+        EditText editText = (EditText) findViewById(R.id.txtNombre);
         String message =editText.getText().toString();
 
+        EditText editText1 = (EditText) findViewById(R.id.txtraza);
+        String message1 =editText1.getText().toString();
 
-        String url = "https://urepublicana.edu.co/pages/index.php"+message;
+        EditText editText2 = (EditText) findViewById(R.id.txttamaño);
+        String message2 =editText2.getText().toString();
+
+
+
+
+
+
+        String url = "https://bedraggled-freezes.000webhostapp.com/android/insert.php?Nombre="+message+"&raza="+message1+"&tamaño="+message2;
 
         // Request a string response from the provided URL.
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
-                        textView.setText("Response is: "+ response.substring(0,19));
+                        textView.setText("Response is: "+ response.substring(0,60));
                     }
                 }, new Response.ErrorListener() {
             @Override

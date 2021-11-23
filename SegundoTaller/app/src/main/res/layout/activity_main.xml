@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -29,13 +29,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtnombre"
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="nombre"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistrar"
+        tools:layout_editor_absoluteX="77dp" />
+
+    <EditText
+        android:id="@+id/txtraza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="raza"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+        tools:layout_editor_absoluteX="77dp" />
+
+    <EditText
+        android:id="@+id/txttamaño"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintTop_toBottomOf="@+id/txtRegistrar"
-        tools:layout_editor_absoluteX="118dp" />
+        android:text="tamaño"
+        app:layout_constraintBottom_toTopOf="@+id/registrar"
+        app:layout_constraintTop_toBottomOf="@+id/txtraza"
+        tools:layout_editor_absoluteX="76dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
